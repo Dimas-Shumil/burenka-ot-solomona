@@ -548,9 +548,6 @@
 
 /* До 500px */
 @media (max-width: 500px) {
-    .container {
-        width: calc(100% - 32px);
-    }
     .header__inner {
         gap: 12px;
     }
@@ -604,9 +601,6 @@
 
 /* До 400px */
 @media (max-width: 400px) {
-    .container {
-        width: calc(100% - 24px);
-    }
     .about-hero__title {
         font-size: 38px;
     }

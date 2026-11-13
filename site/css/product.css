@@ -81,11 +81,6 @@ summary:focus-visible {
   display: none !important;
 }
 
-.container {
-  width: min(1240px, calc(100% - 64px));
-  margin: 0 auto;
-}
-
 .icon {
   object-fit: contain;
   width: 24px;
@@ -280,10 +275,6 @@ summary:focus-visible {
 
 /* Кнопки в шапке */
 
-.header__inner {
-  width: calc(100% - 48px);
-  max-width: none;
-}
 .header__actions {
   display: flex;
   align-items: center;
@@ -1102,12 +1093,6 @@ button:disabled {
   }
 }
 @media (max-width: 768px) {
-  .container {
-    width: calc(100% - 40px);
-  }
-  .header__inner {
-    width: calc(100% - 32px);
-  }
   .product-page {
     padding-top: 36px;
   }
@@ -1159,11 +1144,7 @@ button:disabled {
 }
 
 @media (max-width: 500px) {
-  .container {
-    width: calc(100% - 28px);
-  }
   .header__inner {
-    width: calc(100% - 24px);
     gap: 8px;
   }
   .header__logo {

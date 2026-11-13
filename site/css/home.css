@@ -72,11 +72,6 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
-.container {
-  width: min(1240px, calc(100% - 64px));
-  margin: 0 auto;
-}
-
 .section {
   padding: 32px 0;
 }
@@ -207,8 +202,6 @@ button:focus-visible {
   display: flex;
   align-items: center;
   gap: 28px;
-  width: calc(100% - 48px);
-  max-width: none;
   min-height: 78px;
 }
 
@@ -813,11 +806,6 @@ button:focus-visible {
   font-size: 11px;
 }
 
-@media (min-width: 1400px) {
-  .hero__content {
-    transform: translateX(-40px);
-  }
-}
 @media (max-width: 1399px) and (min-width: 1101px) {
   .hero__content {
     width: 48%;
@@ -1040,9 +1028,6 @@ button:focus-visible {
 
 /* Телефоны */
 @media (max-width: 600px) {
-  .container {
-    width: calc(100% - 32px);
-  }
   .section {
     padding: 26px 0;
   }
@@ -1274,7 +1259,6 @@ button:focus-visible {
 }
 @media (max-width: 500px) {
   .header__inner {
-    width: calc(100% - 24px);
     gap: 8px;
   }
 
