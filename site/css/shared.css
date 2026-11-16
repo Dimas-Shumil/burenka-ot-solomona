@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Общая ширина содержимого на всех страницах. */
 :root {
   --content-width: 1240px;
@@ -7,7 +8,7 @@
 
 .container,
 .section-frame {
-  width: min(var(--content-width), calc(100% - 2 * var(--page-gutter)));
+  width: min(var(--content-width), 100% - 2 * var(--page-gutter));
   margin-inline: auto;
 }
 
@@ -27,20 +28,17 @@
     --frame-padding: 24px;
   }
 }
-
 @media (min-width: 501px) and (max-width: 600px) {
   .header__inner {
     gap: 12px;
   }
 }
-
 @media (max-width: 500px) {
   :root {
     --page-gutter: 12px;
     --frame-padding: 18px;
   }
 }
-
 /* Шапка остаётся в потоке, поэтому контент не прыгает при скрытии. */
 html {
   scroll-padding-top: 96px;
@@ -67,22 +65,15 @@ html {
 
 /* Кнопки и ссылки, оформленные как кнопки. */
 :is(button, .button, .product-info__shops, .partner-contact__telegram) {
-  transition:
-    background-color 0.18s ease,
-    color 0.18s ease,
-    border-color 0.18s ease,
-    box-shadow 0.18s ease,
-    transform 0.18s ease,
-    scale 0.12s ease;
+  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease, scale 0.12s ease;
 }
 
 @media (hover: hover) {
-  :is(button, .button, .product-info__shops, .partner-contact__telegram):not(:disabled):not([aria-disabled="true"]):hover {
-    box-shadow: 0 2px 8px rgb(32 74 36 / 18%);
+  :is(button, .button, .product-info__shops, .partner-contact__telegram):not(:disabled):not([aria-disabled=true]):hover {
+    box-shadow: 0 2px 8px rgba(32, 74, 36, 0.18);
   }
 }
-
-:is(button, .button, .product-info__shops, .partner-contact__telegram):not(:disabled):not([aria-disabled="true"]):active {
+:is(button, .button, .product-info__shops, .partner-contact__telegram):not(:disabled):not([aria-disabled=true]):active {
   scale: 0.96;
 }
 
@@ -96,11 +87,9 @@ html {
   :is(button, .button, .product-info__shops, .partner-contact__telegram) {
     transition: none;
   }
-
   :is(button, .button, .product-info__shops, .partner-contact__telegram):active {
     scale: none;
   }
-
   .button:hover {
     transform: none;
   }

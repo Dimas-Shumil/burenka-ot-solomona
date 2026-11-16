@@ -1,0 +1,55 @@
+{
+  "name": "burenka-solomona",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.13.1 <25"
+  },
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js",
+    "build": "node scripts/build.js",
+    "build:css": "sass site/scss:site/css --no-source-map --style=compressed",
+    "prisma:validate": "prisma validate",
+    "prisma:generate": "prisma generate",
+    "prisma:deploy": "prisma migrate deploy",
+    "prisma:status": "prisma migrate status",
+    "seed": "node prisma/seed.js",
+    "user:create": "node scripts/create-owner.js",
+    "owner:create": "node scripts/create-owner.js",
+    "env:init": "node scripts/init-env.js",
+    "backup": "node scripts/backup.js",
+    "media:cleanup": "node scripts/media-cleanup.js",
+    "test": "node --test --test-concurrency=1 tests/*.test.js",
+    "check": "node scripts/check.js",
+    "security:audit": "npm audit --omit=dev",
+    "backup:restore": "node scripts/restore-backup.js",
+    "db:init": "node scripts/init-db.js",
+    "owner:reset": "node scripts/reset-owner.js",
+    "security:check": "node scripts/security-check.js"
+  },
+  "dependencies": {
+    "@prisma/client": "6.19.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0",
+    "leaflet": "^1.9.4",
+    "multer": "^2.0.2",
+    "sharp": "0.35.5",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.12",
+    "jsdom": "^26.1.0",
+    "prisma": "6.19.3",
+    "sass": "^1.93.2",
+    "supertest": "^7.1.4"
+  },
+  "overrides": {
+    "deepmerge-ts": "8.0.2"
+  }
+}

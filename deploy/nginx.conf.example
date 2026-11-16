@@ -1,0 +1,17 @@
+# Заменить example.com, www.example.com и путь проекта на реальные значения.
+server {
+ listen 80;
+ server_name example.com www.example.com;
+ client_max_body_size 9m;
+ location / {
+  proxy_pass http://127.0.0.1:3108;
+  proxy_http_version 1.1;
+  proxy_set_header Host $host;
+  proxy_set_header X-Real-IP $remote_addr;
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header X-Forwarded-Proto $scheme;
+  proxy_read_timeout 60s;
+ }
+}
+# HTTPS и HTTP->HTTPS добавляются certbot после проверки DNS.
+# Канонический хост задаётся APP_ORIGIN. Настройте редирект www при необходимости.

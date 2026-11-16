@@ -1,0 +1,10 @@
+<!doctype html><html lang="ru"><head><meta charset="UTF-8"><link rel="preload" href="<%= asset('/site/fonts/inter-cyrillic-wght-normal.woff2') %>" as="font" type="font/woff2" crossorigin><link rel="preload" href="<%= asset('/site/fonts/manrope-cyrillic-wght-normal.woff2') %>" as="font" type="font/woff2" crossorigin><meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= title.includes(settings.name)?title:title+' | '+settings.name %></title><meta name="description" content="<%= description || settings.description %>">
+<meta name="robots" content="<%= indexable ? 'index, follow' : 'noindex, follow' %>"><link rel="canonical" href="<%= canonical %>">
+<meta property="og:type" content="website"><meta property="og:title" content="<%= title %>"><meta property="og:description" content="<%= description || settings.description %>"><meta property="og:url" content="<%= canonical %>"><meta property="og:image" content="<%= origin %><%= typeof product!=='undefined'?imageOf(product):typeof store!=='undefined'?imageOf(store):typeof content!=='undefined'&&content.image?content.image:'/site/img/logo.webp' %>"><meta property="og:locale" content="ru_RU">
+<meta name="csrf-token" content="<%= csrf %>"><link rel="icon" href="<%= asset('/site/icons/admin-192.png') %>"><link rel="stylesheet" href="<%= asset('/site/css/home.css') %>"><link rel="stylesheet" href="<%= asset('/site/css/shared.css') %>">
+<% if(typeof pageCss!=='undefined') { %><link rel="stylesheet" href="<%= asset('/site/css/'+pageCss+'.css') %>"><% } %>
+<link rel="stylesheet" href="<%= asset('/site/css/platform.css') %>">
+<link rel="stylesheet" href="<%= asset('/site/css/polish.css') %>">
+<script type="application/ld+json"><%- json({'@context':'https://schema.org','@type':'Organization',name:settings.name,url:origin,...(settings.phone?{telephone:settings.phone}:{}),...(settings.email?{email:settings.email}:{})}) %></script>
+<script src="<%= asset('/site/dist/main.js') %>" defer></script></head><body><a class="skip-link" href="#main">К содержимому</a>

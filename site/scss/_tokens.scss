@@ -1,0 +1,5 @@
+$green:#286e2b;
+$green-dark:#1d4e27;
+$cream:#faf6ed;
+$radius:16px;
+@mixin phone { @media(max-width:640px) { @content; } }

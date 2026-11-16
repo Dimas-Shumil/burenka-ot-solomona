@@ -1,0 +1,184 @@
+<%- include('../views/partials/head.html',{pageCss:'partner'}) %><%- include('../views/partials/header.html') %>
+<main id="main">
+      <!-- Главный экран -->
+      <section class="partner-hero section-frame">
+        <img class="partner-hero__image" src="<%= content.image || '/site/img/partner/partner-hero.webp' %>" alt="Корова на ферме у подножия гор" fetchpriority="high">
+        <div class="container partner-hero__inner">
+          <div class="partner-hero__content">
+            <h1 class="partner-hero__title"><%= content.title %></h1>
+            <p class="partner-hero__description"><%= content.subtitle %></p>
+            <div class="partner-hero__buttons">
+              <a class="button" href="#request">Стать партнёром</a>
+              <a class="button partner-hero__button" href="#request">Обсудить сотрудничество</a>
+            </div>
+            <div class="partner-hero__stats">
+              <div class="partner-hero__stat">
+                <p class="partner-hero__value">Торговая сеть</p>
+                <p class="partner-hero__caption">магазинов в сети</p>
+              </div>
+              <div class="partner-hero__stat">
+                <p class="partner-hero__value">Вся Хакасия</p>
+                <p class="partner-hero__caption">и соседние регионы</p>
+              </div>
+              <div class="partner-hero__stat">
+                <p class="partner-hero__value">Постоянный спрос</p>
+                <p class="partner-hero__caption">на качественную продукцию</p>
+              </div>
+            </div>
+          </div>
+          <p class="partner-hero__note">
+            Натуральные продукты<br>от надёжных партнёров
+          </p>
+        </div>
+      </section>
+
+      <!-- Преимущества -->
+      <section class="partner-benefits">
+        <div class="container">
+          <div class="partner-section">
+            <div class="partner-section__heading">
+              <p class="partner-section__label">Почему с нами выгодно</p>
+              <h2 class="partner-section__title">
+                Преимущества сотрудничества
+              </h2>
+            </div>
+            <p class="partner-section__text">
+              Мы ценим долгосрочные отношения и работаем только с проверенными
+              производителями, которые разделяют наши ценности качества и
+              натуральности.
+            </p>
+          </div>
+          <div class="partner-benefits__list">
+            <article class="partner-benefits__card">
+              <div class="partner-benefits__icon">
+                <img src="<%= asset('/site/icons/partner-cart.svg') %>" alt="">
+              </div>
+              <h3 class="partner-benefits__title">Стабильный сбыт</h3>
+              <p class="partner-benefits__text">
+                Постоянный спрос и сеть магазинов в Хакасии и соседних регионах.
+              </p>
+            </article>
+            <article class="partner-benefits__card">
+              <div class="partner-benefits__icon">
+                <img src="<%= asset('/site/icons/partner-handshake.svg') %>" alt="">
+              </div>
+              <h3 class="partner-benefits__title">Надёжное партнёрство</h3>
+              <p class="partner-benefits__text">
+                Честные условия, прозрачная работа и долгосрочное
+                сотрудничество.
+              </p>
+            </article>
+            <article class="partner-benefits__card">
+              <div class="partner-benefits__icon">
+                <img src="<%= asset('/site/icons/partner-quality.svg') %>" alt="">
+              </div>
+              <h3 class="partner-benefits__title">Акцент на качество</h3>
+              <p class="partner-benefits__text">
+                Тщательный отбор продукции и контроль на всех этапах.
+              </p>
+            </article>
+            <article class="partner-benefits__card">
+              <div class="partner-benefits__icon">
+                <img src="<%= asset('/site/icons/partner-location.svg') %>" alt="">
+              </div>
+              <h3 class="partner-benefits__title">
+                Развитие регионального производства
+              </h3>
+              <p class="partner-benefits__text">
+                Поддерживаем локальных фермеров и производителей из Сибири.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Этапы сотрудничества -->
+      <section class="partner-process">
+        <div class="container">
+          <div class="partner-section">
+            <div class="partner-section__heading">
+              <p class="partner-section__label">Как начать сотрудничество</p>
+              <h2 class="partner-section__title">Простой и понятный процесс</h2>
+            </div>
+            <p class="partner-section__text">
+              Мы открыты к новым предложениям и всегда готовы рассмотреть
+              сотрудничество.
+            </p>
+          </div>
+          <ol class="partner-process__list">
+            <li class="partner-process__step">
+              <span class="partner-process__number">1</span>
+              <h3 class="partner-process__title">Оставьте заявку</h3>
+              <p class="partner-process__text">
+                Расскажите о себе и вашей продукции.
+              </p>
+            </li>
+            <li class="partner-process__step">
+              <span class="partner-process__number">2</span>
+              <h3 class="partner-process__title">Обсудим условия</h3>
+              <p class="partner-process__text">
+                Свяжемся с вами и обсудим детали сотрудничества.
+              </p>
+            </li>
+            <li class="partner-process__step">
+              <span class="partner-process__number">3</span>
+              <h3 class="partner-process__title">Проведём дегустацию</h3>
+              <p class="partner-process__text">
+                Оценим качество продукции и согласуем ассортимент.
+              </p>
+            </li>
+            <li class="partner-process__step">
+              <span class="partner-process__number">4</span>
+              <h3 class="partner-process__title">Начнём сотрудничество</h3>
+              <p class="partner-process__text">
+                Заключаем договор и запускаем поставки в наши магазины.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Приглашение поставщиков -->
+      <section class="partner-invite section-frame">
+        <img class="partner-invite__image" src="/site/img/partner/partner-products.webp" alt="Фермерские молочные продукты на деревянных полках" loading="lazy">
+        <div class="container partner-invite__inner">
+          <div class="partner-invite__content">
+            <p class="partner-section__label">Мы ищем</p>
+            <h2 class="partner-invite__title">
+              Кого мы приглашаем к сотрудничеству
+            </h2>
+            <ul class="partner-invite__list">
+              <li class="partner-invite__item">
+                <img src="<%= asset('/site/icons/partner-check.svg') %>" alt="">
+                <span>Фермерские хозяйства</span>
+              </li>
+              <li class="partner-invite__item">
+                <img src="<%= asset('/site/icons/partner-check.svg') %>" alt="">
+                <span>Производители молочной продукции</span>
+              </li>
+              <li class="partner-invite__item">
+                <img src="<%= asset('/site/icons/partner-check.svg') %>" alt="">
+                <span>Поставщики сыра, творога, масла, йогуртов</span>
+              </li>
+              <li class="partner-invite__item">
+                <img src="<%= asset('/site/icons/partner-check.svg') %>" alt="">
+                <span>Производители мясной и колбасной продукции</span>
+              </li>
+              <li class="partner-invite__item">
+                <img src="<%= asset('/site/icons/partner-check.svg') %>" alt="">
+                <span>Поставщики мёда, ягод, варенья и консервации</span>
+              </li>
+              <li class="partner-invite__item">
+                <img src="<%= asset('/site/icons/partner-check.svg') %>" alt="">
+                <span>Производители натуральных и экологичных продуктов</span>
+              </li>
+            </ul>
+            <a class="button partner-invite__button" href="#request">Предложить продукцию</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Контакты для партнёров -->
+      
+    <section class="container section b-prose"><%= content.body %></section><div class="container"><%- include("../views/partials/request-form.html") %></div></main>
+<%- include('../views/partials/footer.html') %>

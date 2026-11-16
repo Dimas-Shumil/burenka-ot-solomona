@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Общие настройки */
 :root {
   --green: #286e2b;
@@ -37,7 +38,7 @@ figure {
 h1,
 h2,
 h3 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-heading);
 }
 
 h2 {
@@ -108,9 +109,7 @@ button:focus-visible {
   font-size: 13px;
   font-weight: 700;
   line-height: 1.2;
-  transition:
-    background 0.2s,
-    transform 0.2s;
+  transition: background 0.2s, transform 0.2s;
 }
 
 .button:hover {
@@ -183,7 +182,7 @@ button:focus-visible {
 }
 
 .handwritten {
-  font-family: "Segoe Print", "Comic Sans MS", cursive;
+  font-family: var(--font-heading);
   font-size: 20px;
   font-style: italic;
   line-height: 1.3;
@@ -282,7 +281,7 @@ button:focus-visible {
 
 /* Главный экран */
 .hero {
-  background-image: url("../img/hero-v2.png");
+  background-image: var(--hero-image, url("../img/hero-v2.webp"));
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -309,7 +308,7 @@ button:focus-visible {
 .hero__subtitle {
   margin-top: 8px;
   color: var(--green);
-  font-family: Georgia, serif;
+  font-family: var(--font-heading);
   font-size: clamp(21px, 2.2vw, 31px);
   font-weight: 700;
   line-height: 1.1;
@@ -667,7 +666,7 @@ button:focus-visible {
 .sale-card__value {
   margin-top: 6px;
   color: var(--green);
-  font-family: Georgia, serif;
+  font-family: var(--font-heading);
   font-size: 32px;
   font-weight: 700;
   line-height: 1;
@@ -825,17 +824,8 @@ button:focus-visible {
     font-size: 12px;
   }
   .hero {
-    background-image:
-      linear-gradient(
-        to right,
-        rgba(250, 246, 237, 0.96) 0%,
-        rgba(250, 246, 237, 0.88) 38%,
-        rgba(250, 246, 237, 0.55) 58%,
-        rgba(250, 246, 237, 0) 78%
-      ),
-      url("../img/hero-v2.png");
+    background-image: linear-gradient(to right, rgba(250, 246, 237, 0.96) 0%, rgba(250, 246, 237, 0.88) 38%, rgba(250, 246, 237, 0.55) 58%, rgba(250, 246, 237, 0) 78%), var(--hero-image, url("../img/hero-v2.webp"));
   }
-
   .hero__content {
     width: 55%;
   }
@@ -902,7 +892,6 @@ button:focus-visible {
     grid-column: 3;
   }
 }
-
 /* Мобильное меню и адаптация */
 @media (max-width: 1000px) {
   .header__inner {
@@ -999,33 +988,20 @@ button:focus-visible {
     max-width: 440px;
   }
 }
-
 @media (max-width: 800px) {
   .hero {
-    background-image:
-      linear-gradient(
-        to right,
-        rgba(250, 246, 237, 0.96) 0%,
-        rgba(250, 246, 237, 0.9) 48%,
-        rgba(250, 246, 237, 0.65) 72%,
-        rgba(250, 246, 237, 0.25) 100%
-      ),
-      url("../img/hero-v2.png");
+    background-image: linear-gradient(to right, rgba(250, 246, 237, 0.96) 0%, rgba(250, 246, 237, 0.9) 48%, rgba(250, 246, 237, 0.65) 72%, rgba(250, 246, 237, 0.25) 100%), var(--hero-image, url("../img/hero-v2.webp"));
   }
-
   .hero__content {
     width: 68%;
   }
-
   .hero__title {
     letter-spacing: -0.5px;
   }
-
   .hero__description {
     max-width: 390px;
   }
 }
-
 /* Телефоны */
 @media (max-width: 600px) {
   .section {
@@ -1062,19 +1038,10 @@ button:focus-visible {
     padding: 22px 20px;
   }
   .hero {
-    background-image:
-      linear-gradient(
-        to right,
-        rgba(250, 246, 237, 0.97) 0%,
-        rgba(250, 246, 237, 0.92) 55%,
-        rgba(250, 246, 237, 0.68) 100%
-      ),
-      url("../img/hero-v2.png");
-
+    background-image: linear-gradient(to right, rgba(250, 246, 237, 0.97) 0%, rgba(250, 246, 237, 0.92) 55%, rgba(250, 246, 237, 0.68) 100%), var(--hero-image, url("../img/hero-v2.webp"));
     background-position: 34% center;
     background-size: cover;
   }
-
   .hero__inner {
     min-height: 480px;
     padding: 46px 0 32px;
@@ -1082,15 +1049,12 @@ button:focus-visible {
   .hero__content {
     width: 82%;
   }
-
   .hero__title {
     font-size: clamp(29px, 8vw, 34px);
   }
-
   .hero__subtitle {
     font-size: clamp(21px, 6vw, 25px);
   }
-
   .hero__description {
     font-size: clamp(14px, 3.8vw, 15px);
   }
@@ -1261,17 +1225,14 @@ button:focus-visible {
   .header__inner {
     gap: 8px;
   }
-
   .header__actions {
     gap: 8px;
   }
-
   /* Скрываем текст, сохраняя контейнеры иконок. */
   .header__actions .header__cart-text,
   .header__actions .header__button > span:not(.header__action-icon) {
     display: none;
   }
-
   .header__actions .header__cart,
   .header__actions .header__button {
     width: 40px;
@@ -1282,19 +1243,16 @@ button:focus-visible {
     margin: 0;
     flex-shrink: 0;
   }
-
   .header__actions .header__action-icon {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
   .header__actions .header__action-icon img {
     width: 20px;
     height: 20px;
   }
 }
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1304,35 +1262,29 @@ button:focus-visible {
     transition: none;
   }
 }
-
 @media (max-width: 400px) {
   .hero__content {
     width: 100%;
   }
 }
-
 @media (max-width: 360px) {
   .advantages {
     grid-template-columns: 1fr;
     gap: 0;
     padding: 8px 16px;
   }
-
   .advantages__item {
     min-width: 0;
     padding: 16px 0;
   }
-
   .advantages__item + .advantages__item {
     border-left: none;
     border-top: 1px solid var(--border);
   }
-
   .advantages__title,
   .advantages__text {
     overflow-wrap: anywhere;
   }
-
   .category-grid {
     grid-template-columns: 1fr;
   }
